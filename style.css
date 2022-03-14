@@ -1,0 +1,105 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  color: #FFF;
+
+  background-color: rgb(88, 182, 185);
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px 10px;
+
+  background-color: #FFF;
+
+  color: rgb(185, 88, 88);
+  border: 2px solid transparent;
+  border-radius: 5px;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn:hover {
+  color:#FFF;
+  border: 2px solid #FFF;
+
+  background-color:  rgb(185, 88, 88);
+}
+
+.container {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 50px auto;
+}
+
+main {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.board {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+
+.case {
+  width: 133px;
+  height: 133px;
+  border: 2px solid  #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.infos {
+  margin-top: 40px;
+}
+
+.infos .alert-step,
+.infos .alert-busy {
+  margin: 20px 0;
+}
+
+.alert-busy {
+  display: none;
+
+  font-weight: bolder;
+  color:  rgb(192, 25, 61);
+}
+
+.victories-1,
+.victories-2 {
+  font-weight: bolder;
+}
+
+
+@media only screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  .board {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .case {
+    width: 100%;
+    height: 133px;
+  }
+}
